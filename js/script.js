@@ -1,10 +1,10 @@
-// Initialisation des données de l'état initial
-let essences = 0; // Nombre d'essences
-let elements = []; // Liste des éléments
-let bonuses = []; // Liste des bonus
-let pointsParClic = 1; // Points gagnés par clic
+// Initial state
+let essences = 0;
+let elements = [];
+let bonuses = [];
+let pointsParClic = 1;
 
-// Charger l'état depuis le stockage local s'il existe
+// Load state from localStorage
 if(localStorage.getItem("pokemonClickerSave")) {
     const saveData = JSON.parse(localStorage.getItem("pokemonClickerSave"));
     essences = saveData.essences;
@@ -12,28 +12,36 @@ if(localStorage.getItem("pokemonClickerSave")) {
     bonuses = saveData.bonuses;
 }
 
-// Fonction pour sauvegarder l'état actuel dans le stockage local
-function saveState() {
-    localStorage.setItem("pokemonClickerSave", JSON.stringify({ essences, elements, bonuses }));
-}
-
-// Mettre à jour l'affichage
+// Update display
 function updateDisplay() {
     document.getElementById("essenceDisplay").innerText = `Essences: ${essences}`;
     document.getElementById("elementsContainer").innerHTML = elements.map(element => `<div class="element">${element.name} (${element.cost} Essences)</div>`).join("");
 }
 
-// Fonction pour cliquer et gagner des essences
+// Click to alchemize
 function clickAlchemy() {
     essences += pointsParClic;
     updateDisplay();
-    saveState(); // Sauvegarder l'état après chaque clic
 }
 
-// Sauvegarder l'état automatiquement toutes les 30 secondes
+// Save state to localStorage every 30 seconds
 setInterval(() => {
-    saveState();
+    localStorage.setItem("pokemonClickerSave", JSON.stringify({ essences, elements, bonuses }));
 }, 30000);
 
-// Mettre à jour l'affichage au chargement de la page
+// Initial display update
 updateDisplay();
+
+// Add event listener to alchemy image for shake effect and clickAlchemy function
+document.getElementById("alchemyImage").addEventListener("click", function() {
+    // Call clickAlchemy function
+    clickAlchemy();
+    
+    // Add 'shake' class to the image
+    this.classList.add("shake");
+
+    // Remove 'shake' class after a short duration
+    setTimeout(() => {
+        this.classList.remove("shake");
+    }, 500); // Duration of the shake animation in milliseconds
+});

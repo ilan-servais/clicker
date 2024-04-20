@@ -9,7 +9,7 @@ pokeballBonus.addEventListener("click", function() {
         // Déduit le coût du bonus des essences
         essences -= 20;
         // Augmente la valeur de chaque clic de 2
-        clickAlchemy += 2;
+        pointsParClic += 2; // Met à jour pointsParClic au lieu de clickAlchemy
         // Met à jour l'affichage
         updateDisplay();
     } else {
@@ -28,8 +28,8 @@ pokeballBonus2.addEventListener("click", function() {
     if (essences >= 50) {
         // Déduit le coût du bonus des essences
         essences -= 50;
-        // Augmente la valeur de chaque clic de 2
-        clickAlchemy += 5;
+        // Augmente la valeur de chaque clic de 5
+        pointsParClic += 5; // Met à jour pointsParClic au lieu de clickAlchemy
         // Met à jour l'affichage
         updateDisplay();
     } else {
@@ -48,8 +48,8 @@ pokeballBonus3.addEventListener("click", function() {
     if (essences >= 80) {
         // Déduit le coût du bonus des essences
         essences -= 80;
-        // Augmente la valeur de chaque clic de 2
-        clickAlchemy += 8;
+        // Augmente la valeur de chaque clic de 8
+        pointsParClic += 8; // Met à jour pointsParClic au lieu de clickAlchemy
         // Met à jour l'affichage
         updateDisplay();
     } else {
@@ -68,8 +68,8 @@ pokeballBonus4.addEventListener("click", function() {
     if (essences >= 100) {
         // Déduit le coût du bonus des essences
         essences -= 100;
-        // Augmente la valeur de chaque clic de 2
-        clickAlchemy += 5;
+        // Augmente la valeur de chaque clic de 5
+        pointsParClic += 5; // Met à jour pointsParClic au lieu de clickAlchemy
         // Met à jour l'affichage
         updateDisplay();
     } else {
@@ -77,6 +77,7 @@ pokeballBonus4.addEventListener("click", function() {
         alert("Vous n'avez pas assez d'essences pour acheter ce bonus !");
     }
 });
+
 //MASTER
 // Sélectionne l'élément avec l'ID "pokeball"
 const pokeballBonus5 = document.getElementById("masterball");
@@ -84,11 +85,11 @@ const pokeballBonus5 = document.getElementById("masterball");
 // Ajoute un écouteur d'événements sur cet élément
 pokeballBonus5.addEventListener("click", function() {
     // Vérifie si l'utilisateur a assez d'essences pour acheter le bonus
-    if (essences >= 12) {
+    if (essences >= 120) {
         // Déduit le coût du bonus des essences
         essences -= 120;
-        // Augmente la valeur de chaque clic de 2
-        clickAlchemy += 5;
+        // Augmente la valeur de chaque clic de 5
+        pointsParClic += 5; // Met à jour pointsParClic au lieu de clickAlchemy
         // Met à jour l'affichage
         updateDisplay();
     } else {
