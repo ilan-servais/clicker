@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Luckiest+Guy&family=Nabla&family=Slackey&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css"> 
+    <title>Poke Clicker</title>
+</head>
+<body >
+    <header class="flex justify-center items-center py-8">
+        <img src="./asset/titre.png" alt="" class="h-auto w-auto">
+    </header>
+    <!--    Clicker conteneur   -->
+<main class="container mx-auto px-4">
+    <section class="game bg-white rounded-lg shadow-md p-6 mb-8">
+        <div class="bannerLevel">
+            <h1 class="text-2xl font-bold">Forêt du Bourg Palette niveau 1</h1>
+            <h2 class="score"></h2>
+            <div id="essenceDisplay"></div>
+            <img class="imgClicker" src="./asset/buisson.png" alt="" button id="alchemyButton" onclick="clickAlchemy()"></button> 
+            <div id="elementsContainer"></div>
+        </div>
+    </section>
+    <!--    Boutique here  -->
+    <section class="shop bg-white rounded-lg shadow-md p-6">
+        <h1 class="titleShop text-2xl font-bold mb-4">Boutique</h1>
+        <div id="boutique">
+        </div>
+    </section>
+    <!--    Bonus   -->
+    <section class="shop bg-white rounded-lg shadow-md p-6"> 
+        <h1 class="titleShop text-2xl font-bold mb-4">Bonus</h1>
+        <ul class="menu">
+            <li><button class="w-auto h-auto flex items-center justify-center">
+                <img id="pokeball" src="asset/Poké_Ball-RS.png" alt="Pokeball" class="w-full h-auto">
+            </button></li>
+            <li> <button class="w-auto h-auto flex items-center justify-center">
+                <img id="honorball" src="./asset/Honor_Ball-RS.png" alt="Honor Ball" class="w-full h-auto">
+            </button></li>
+            <li> <button class="w-auto h-auto flex items-center justify-center">
+                <img id="superball" src="./asset/super.jpeg" alt="Super Ball" class="w-full h-auto">
+            </button></li>
+            <li><button class="w-auto h-auto flex items-center justify-center">
+                <img id="hyperball" src="./asset/Hyper_Ball-RS.png" alt="Hyper Ball" class="w-full h-auto">
+            </button></li>
+            <li><button class="w-auto h-auto flex items-center justify-center">
+                <img id="masterball" src="./asset/Master_Ball-RS.png" alt="Master Ball" class="w-full h-auto">
+            </button></li>
+        </ul>
+    </section>
+</main>
+    <footer></footer>
+    <script src="js/script.js"></script> 
+    <script src="js/bonus.js"></script>
+    <script src="js/boutique.js"></script>
+</body>
+</html>
