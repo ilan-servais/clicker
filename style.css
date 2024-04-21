@@ -6,7 +6,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-image: url(./asset/ciel.jpg);
+    background-image: url(./asset/ciel.webp);
 }
 #essenceDisplay {
     font-size: 24px;
@@ -43,7 +43,7 @@ figure {
 main {
     display: flex;
     border: 3px solid;
-    background-image: url(./asset/bgdex.png);
+    background-image: url(./asset/bgdex.webp);
 }
 
 h1 {
@@ -65,7 +65,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-image: url(./asset/ciel.jpg);
+    background-image: url(./asset/ciel.webp);
 }
 
 .shop {
@@ -93,7 +93,7 @@ li {
     height: 560px;
     width: 80%;
     border: 3px solid;
-    background-image: url(./asset/lvl1.png);
+    background-image: url(./asset/lvl1.webp);
     background-size: cover;
 }
 
